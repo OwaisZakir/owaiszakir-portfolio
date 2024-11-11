@@ -5,6 +5,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   width: 100%;
@@ -124,6 +128,9 @@ header .container ul li a {
   transition: all 0.3s ease;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
 body #home {
   padding-top: 9rem;
 }
@@ -229,4 +236,58 @@ body #home .container .left .homeBtn:hover .circle {
 body #home .container .right {
   width: 50%;
   height: 100%;
+}
+body #home .container .right .social-media-container {
+  top: 50%;
+  list-style-type: none;
+  padding: 0;
+  position: fixed;
+  left: calc(100% - 60px);
+  transform: translateY(-50%);
+  min-width: 250px;
+}
+body #home .container .right .social-media-container .social-media {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 0.2rem;
+  border-radius: 15px 0 0 15px;
+  -webkit-border-radius: 15px 0 0 15px;
+  -moz-border-radius: 15px 0 0 15px;
+  -ms-border-radius: 15px 0 0 15px;
+  -o-border-radius: 15px 0 0 15px;
+}
+body #home .container .right .social-media-container .social-media:hover {
+  transform: translateX(calc(-100% + 60px));
+}
+body #home .container .right .social-media-container .social-media i {
+  color: #fff;
+  font-size: 22px;
+  padding: 15px;
+  text-align: center;
+  width: 60px;
+}
+body #home .container .right .social-media-container .social-media a {
+  color: #fff;
+  padding: 0 10px;
+  text-align: center;
+  text-decoration: none;
+}
+body #home .container .right .social-media-container .social-media.whatsapp {
+  background-color: #25d366;
+}
+body #home .container .right .social-media-container .social-media.github {
+  background-color: #333;
+}
+body #home .container .right .social-media-container .social-media.linkedin {
+  background-color: #0077b5;
+}
+body #home .container .right .social-media-container .social-media.facebook {
+  background-color: #3b5998;
+}
+body #home .container .right .social-media-container .social-media.instagram {
+  background-color: #c13584;
+}
+body #home .container .right .social-media-container .social-media.email {
+  background-color: #d14836;
 }

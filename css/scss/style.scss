@@ -1,14 +1,16 @@
 //   Portfolio - Description
 //  Author: Owais Zakir
 //  Date: 2024-11-10
-
+@import "./variables";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   width: 100%;
@@ -128,6 +130,10 @@ header {
 }
 // =============================================================
 body {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   #home {
     padding-top: 9rem;
     .container {
@@ -244,6 +250,70 @@ body {
       .right {
         width: 50%;
         height: 100%;
+
+        // Social Media Container Styles
+        .social-media-container {
+          top: 50%;
+          list-style-type: none;
+          padding: 0;
+          position: fixed;
+          left: calc(100% - #{$social-media-width});
+          transform: translateY(-50%);
+          min-width: 250px;
+
+          .social-media {
+            display: flex;
+            align-items: center;
+            transition: transform $social-media-transition-duration ease-in-out;
+            margin-bottom: 0.2rem;
+            border-radius: 15px 0 0 15px;
+            -webkit-border-radius: 15px 0 0 15px;
+            -moz-border-radius: 15px 0 0 15px;
+            -ms-border-radius: 15px 0 0 15px;
+            -o-border-radius: 15px 0 0 15px;
+            &:hover {
+              transform: translateX(calc(-100% + #{$social-media-width}));
+            }
+
+            i {
+              color: #fff;
+              font-size: $social-media-icon-size;
+              padding: $social-media-padding;
+              text-align: center;
+              width: $social-media-width;
+            }
+
+            a {
+              color: #fff;
+              padding: 0 $social-media-link-padding;
+              text-align: center;
+              text-decoration: none;
+            }
+            &.whatsapp {
+              background-color: $social-media-color-whatsapp;
+            }
+
+            &.github {
+              background-color: $social-media-color-github;
+            }
+
+            &.linkedin {
+              background-color: $social-media-color-linkedin;
+            }
+
+            &.facebook {
+              background-color: $social-media-color-facebook;
+            }
+
+            &.instagram {
+              background-color: $social-media-color-instagram;
+            }
+
+            &.email {
+              background-color: $social-media-color-email;
+            }
+          }
+        }
       }
     }
   }
