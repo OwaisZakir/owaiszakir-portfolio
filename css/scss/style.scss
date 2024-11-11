@@ -1,0 +1,250 @@
+//   Portfolio - Description
+//  Author: Owais Zakir
+//  Date: 2024-11-10
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+}
+/* Add more styles below */
+// =============================================================
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(9px) saturate(181%);
+  -webkit-backdrop-filter: blur(9px) saturate(181%);
+  background-color: rgba(17, 25, 40, 0.48);
+  border-bottom: 2px solid #fff;
+  -webkit-border-bottom-right-radius: 25px;
+  -webkit-border-bottom-left-radius: 25px;
+  -moz-border-radius-bottomright: 25px;
+  -moz-border-radius-bottomleft: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Shine Effect for Heading (Your Name) */
+    .name-shine {
+      position: relative;
+      display: inline-block;
+      padding: 12px 48px;
+      color: #fff;
+      background: linear-gradient(to right, #9f9f9f 0%, #fff 10%, #868686 20%);
+      background-size: 200% 100%; /* Larger background size for smoother transition */
+      background-position: -200% 0; /* Start from the left outside */
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 6s infinite linear; /* Increased duration to 6 seconds */
+      animation-fill-mode: forwards;
+      -webkit-text-size-adjust: none;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    /* Keyframes for smoother shine animation */
+    @keyframes shine {
+      0% {
+        background-position: -200% 0; /* Starts offscreen */
+      }
+      50% {
+        background-position: 200% 0; /* Moves the gradient across */
+      }
+      100% {
+        background-position: -200% 0; /* Loops back offscreen */
+      }
+    }
+
+    /* Webkit for compatibility */
+    @-webkit-keyframes shine {
+      0% {
+        background-position: -200% 0;
+      }
+      50% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
+
+    /* Firefox */
+    @-moz-keyframes shine {
+      0% {
+        background-position: -200% 0;
+      }
+      50% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
+
+    /* Opera */
+    @-o-keyframes shine {
+      0% {
+        background-position: -200% 0;
+      }
+      50% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      li {
+        list-style: none;
+        padding: 1rem;
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 1.2rem;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+}
+// =============================================================
+body {
+  #home {
+    padding-top: 9rem;
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 2rem;
+      .left {
+        width: 50%;
+        height: 100%;
+        h3 {
+          font-size: 2rem;
+        }
+        h1 {
+          font-size: 4rem;
+        }
+        h2 {
+          font-size: 1.5rem;
+        }
+        p {
+          margin-top: 1rem;
+          font-size: 1.2rem;
+        }
+
+        .homeBtn {
+          margin-top: 2rem;
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          padding: 16px 36px;
+          border: 4px solid;
+          border-color: transparent;
+          font-size: 16px;
+          background-color: inherit;
+          border-radius: 100px;
+          font-weight: 600;
+          color: #fff;
+          box-shadow: 0 0 0 2px #fff;
+          cursor: pointer;
+          overflow: hidden;
+          transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .homeBtn svg {
+          position: absolute;
+          width: 24px;
+          fill: #fff;
+          z-index: 9;
+          transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .homeBtn .arr-1 {
+          right: 16px;
+        }
+
+        .homeBtn .arr-2 {
+          left: -25%;
+        }
+
+        .homeBtn .circle {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 20px;
+          height: 20px;
+          background-color: #fff;
+          border-radius: 50%;
+          opacity: 0;
+          transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .homeBtn .text {
+          position: relative;
+          z-index: 1;
+          transform: translateX(-12px);
+          transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .homeBtn:hover {
+          box-shadow: 0 0 0 12px transparent;
+          color: #212121;
+          border-radius: 12px;
+        }
+
+        .homeBtn:hover .arr-1 {
+          right: -25%;
+        }
+
+        .homeBtn:hover .arr-2 {
+          left: 16px;
+        }
+
+        .homeBtn:hover .text {
+          transform: translateX(12px);
+        }
+
+        .homeBtn:hover svg {
+          fill: #212121;
+        }
+
+        .homeBtn:active {
+          scale: 0.95;
+          box-shadow: 0 0 0 4px #fff;
+        }
+
+        .homeBtn:hover .circle {
+          width: 220px;
+          height: 220px;
+          opacity: 1;
+        }
+      }
+      .right {
+        width: 50%;
+        height: 100%;
+      }
+    }
+  }
+}
