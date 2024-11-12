@@ -18,10 +18,6 @@ body {
 
 /* Add more styles below */
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   backdrop-filter: blur(9px) saturate(181%);
   -webkit-backdrop-filter: blur(9px) saturate(181%);
   background-color: rgba(17, 25, 40, 0.48);
@@ -131,9 +127,6 @@ header .container ul li a {
 body::-webkit-scrollbar {
   display: none;
 }
-body #home {
-  padding-top: 9rem;
-}
 body #home .container {
   display: flex;
   justify-content: center;
@@ -141,8 +134,9 @@ body #home .container {
   padding: 0 2rem;
 }
 body #home .container .left {
-  width: 50%;
+  width: 55%;
   height: 100%;
+  padding-top: 5rem;
 }
 body #home .container .left h3 {
   font-size: 2rem;
@@ -234,8 +228,17 @@ body #home .container .left .homeBtn:hover .circle {
   opacity: 1;
 }
 body #home .container .right {
-  width: 50%;
+  width: 45%;
   height: 100%;
+}
+body #home .container .right .image {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+body #home .container .right .image img {
+  height: 36vw;
 }
 body #home .container .right .social-media-container {
   top: 50%;
@@ -244,7 +247,7 @@ body #home .container .right .social-media-container {
   position: fixed;
   left: calc(100% - 60px);
   transform: translateY(-50%);
-  min-width: 250px;
+  min-width: 50px;
 }
 body #home .container .right .social-media-container .social-media {
   display: flex;
@@ -290,4 +293,12 @@ body #home .container .right .social-media-container .social-media.instagram {
 }
 body #home .container .right .social-media-container .social-media.email {
   background-color: #d14836;
+}
+
+#about {
+  scroll-margin-top: 1rem;
+}
+#about h1 {
+  text-align: center;
+  font-size: 3rem;
 }
