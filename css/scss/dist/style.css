@@ -232,7 +232,9 @@ body #home .container .right {
   height: 100%;
 }
 body #home .container .right .image {
+  position: relative;
   padding-top: 1rem;
+  padding-right: 1.5rem;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -243,7 +245,7 @@ body #home .container .right .image img {
 body #home .container .right .social-media-container {
   top: 50%;
   list-style-type: none;
-  padding: 0;
+  padding: 0.3rem;
   position: fixed;
   left: calc(100% - 60px);
   transform: translateY(-50%);

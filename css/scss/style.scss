@@ -251,20 +251,21 @@ body {
         width: 45%;
         height: 100%;
         .image{
+          position: relative;
           padding-top: 1rem;
+          padding-right: 1.5rem;
           display: flex;
           justify-content: end;
           align-items: center;
           img{
             height: 36vw;
-
           }
         }
         // Social Media Container Styles
         .social-media-container {
           top: 50%;
           list-style-type: none;
-          padding: 0;
+          padding: .3rem;
           position: fixed;
           left: calc(100% - #{$social-media-width});
           transform: translateY(-50%);
